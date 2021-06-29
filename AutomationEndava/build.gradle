@@ -1,0 +1,50 @@
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'eclipse'
+apply plugin: 'net.serenity-bdd.aggregator'
+
+version '1.0-SNAPSHOT'
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+repositories {
+    mavenCentral()
+}
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("net.serenity-bdd:serenity-gradle-plugin:2.4.4")
+    }
+}
+
+ext {
+    serenityVersion = '2.4.5'
+    serenityCucumberVersion = '6.10.4'
+}
+
+dependencies {
+    implementation "net.serenity-bdd:serenity-core:$rootProject.ext.serenityVersion"
+    implementation "net.serenity-bdd:serenity-junit:$rootProject.ext.serenityVersion"
+    implementation "net.serenity-bdd:serenity-ensure:$rootProject.ext.serenityVersion"
+    implementation "net.serenity-bdd:serenity-screenplay:$rootProject.ext.serenityVersion"
+    implementation "net.serenity-bdd:serenity-screenplay-webdriver:$rootProject.ext.serenityVersion"
+    // https://mvnrepository.com/artifact/net.serenity-bdd/serenity-cucumber6
+    implementation group: 'net.serenity-bdd', name: 'serenity-cucumber6', version: '2.4.34'
+
+    implementation "io.cucumber:cucumber-core:$rootProject.ext.serenityCucumberVersion"
+    implementation "io.cucumber:cucumber-junit:$rootProject.ext.serenityCucumberVersion"
+    testImplementation 'junit:junit:4.9'
+    testImplementation 'org.slf4j:slf4j-simple:1.7.7'
+
+    implementation group: 'io.github.bonigarcia', name: 'webdrivermanager', version: '4.4.3'
+// https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.12.3'
+
+}
+
+
+
+

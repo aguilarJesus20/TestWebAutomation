@@ -1,0 +1,282 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.20/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.20/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.20/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.20/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.20/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">AutomatinEndava</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="51e3d3dde249557f7bb51ef02a81ec7576581e3d2a6aec5e5b174985958e901b.html">The User Search A Trip On Www.Aa.Com Page Correctly</a></span>
+                > <span class="truncate-60"><a
+                    href="04121fce9217c2b4b9766afcd745d4c06c92ed25bc43e89c352b8443acd7c935.html">The user search for a trip for two </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 29-06-2021 06:17</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">The User Search A Trip On Www.Aa.Com Page Correctly </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">The user search for a trip for two
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="4a4360c9d4bd22f691fd5caa822d072ac44c3c0e6614fd76993417df8b24f898.png" title=" Given the user is on the main page" width="1366"/>
+                <img src="4a4360c9d4bd22f691fd5caa822d072ac44c3c0e6614fd76993417df8b24f898.png" title=" User close ads window" width="1366"/>
+                <img src="4a4360c9d4bd22f691fd5caa822d072ac44c3c0e6614fd76993417df8b24f898.png" title=" User clicks on Opt checkbox cookies" width="1366"/>
+                <img src="0c3288fe6d5ae4b61cc7b206f7df4f0c6e4307ada91067a51f463f7697d9c330.png" title=" User clicks on continue button ads" width="1366"/>
+                <img src="0c3288fe6d5ae4b61cc7b206f7df4f0c6e4307ada91067a51f463f7697d9c330.png" title=" User close ads window (completed)" width="1366"/>
+                <img src="f2f095c0aa239a405a85cfc9db2cdb737f86aa755f75616feb95329350c6724e.png" title=" Given the user is on the main page (completed)" width="1366"/>
+                <img src="e94856c8f60b5d19c6762d8bed42ebe8b093450a094905ef984e6c8d22418eac.png" title=" When he search a trip from specific information
+| originCity | destinationCity | countPassengers | depart | returnDate |
+| Bogota | San Francisco | 2 | 05/07/2021 | 10/07/2021 |" width="1366"/>
+                <img src="e94856c8f60b5d19c6762d8bed42ebe8b093450a094905ef984e6c8d22418eac.png" title=" User clicks on Origin Airport" width="1366"/>
+                <img src="993c395cd7332f22091dcda3107e5dc96d4c48eed925a6534a1c49361c4756c9.png" title=" User enters 'Bogota' into Origin Airport" width="1366"/>
+                <img src="e94856c8f60b5d19c6762d8bed42ebe8b093450a094905ef984e6c8d22418eac.png" title=" User clicks on Selecting origin city" width="1366"/>
+                <img src="dada260c0a505608823a526f51ef85e4d444d8b36ea2e9b0a1dc66c127c42b72.png" title=" User enters 'San Francisco' into Destination Airport" width="1366"/>
+                <img src="01a9a84b61bb732d6cb09da5864540602e49af400005b4f64b6ac9234d4dc123.png" title=" User clicks on Selecting origin city" width="1366"/>
+                <img src="3140b15d0d72bc2f728da92b5f58b0b9c0a4e5c4eb495cde17bc4ad18db7c550.png" title=" User clicks on Click on depart button" width="1366"/>
+                <img src="f9211a4c8c8e7c2809346766fabf2940dd3556d8ae9d6c1a7c4120daf6c5e3b3.png" title=" User clicks on Selecting date" width="1366"/>
+                <img src="62c676b19893d49f0315e787d1a02242c29cf9b9befb1e619be54ee5004e28a5.png" title=" User clicks on Click on depart button" width="1366"/>
+                <img src="dfd6971454d3ab96615b2e51b3724154d0da2919c15d8f701d7096f58a9f4e4d.png" title=" User clicks on Selecting date" width="1366"/>
+                <img src="8578c14a175d88ba6b1ec4b13b7dcaba0d13640dabea777cfc2a251dac38447f.png" title=" User clicks on Click on search button" width="1366"/>
+                <img src="5c36d27ccbef93dbaabdfd082ee2a17fc9a49e6f7389495cdc8e8242e6bc1860.png" title=" User wait process" width="1366"/>
+                <img src="5c36d27ccbef93dbaabdfd082ee2a17fc9a49e6f7389495cdc8e8242e6bc1860.png" title=" When he search a trip from specific information
+| originCity | destinationCity | countPassengers | depart | returnDate |
+| Bogota | San Francisco | 2 | 05/07/2021 | 10/07/2021 | (completed)" width="1366"/>
+                <img src="4828799eb5a827b181369431649dfcda6a0afb5a7446b1967188914350518412.png" title=" And he selects the lowest price for both trips" width="1366"/>
+                <img src="4828799eb5a827b181369431649dfcda6a0afb5a7446b1967188914350518412.png" title=" User select lowest price" width="1366"/>
+                <img src="4828799eb5a827b181369431649dfcda6a0afb5a7446b1967188914350518412.png" title=" User show the all options" width="1366"/>
+                <img src="4828799eb5a827b181369431649dfcda6a0afb5a7446b1967188914350518412.png" title=" User clicks on Show more button" width="1366"/>
+                <img src="2478e47b8064824a8e21c89d689d3c2196ff489bd8ece0beffea3bb7437de10a.png" title=" User clicks on Show more button" width="1366"/>
+                <img src="8b38f9938836f20660a68b61ebd13b08f47607d530fdc9a3e733e2a1c5b90865.png" title=" User clicks on Show more button" width="1366"/>
+                <img src="8b38f9938836f20660a68b61ebd13b08f47607d530fdc9a3e733e2a1c5b90865.png" title=" User show the all options (completed)" width="1366"/>
+                <img src="88484ccff170c289bd999a4707e57fce956fe2fdaaf7b4522f312708bec54586.png" title=" User clicks on Click on accept restrictions" width="1366"/>
+                <img src="88484ccff170c289bd999a4707e57fce956fe2fdaaf7b4522f312708bec54586.png" title=" User wait process" width="1366"/>
+                <img src="8e16f9c7724b3da01028982f29552c8f3617a2fbe5da7bc253c5cf89c2a194cc.png" title=" User show the all options" width="1366"/>
+                <img src="8e16f9c7724b3da01028982f29552c8f3617a2fbe5da7bc253c5cf89c2a194cc.png" title=" User clicks on Show more button" width="1366"/>
+                <img src="182c1d2e5878aed503fc0190bfa5e5a0c81ca3658323ae171616b82fef39b82c.png" title=" User clicks on Show more button" width="1366"/>
+                <img src="44393ca75881736af4d01a8f8ff093b00ed063af8e652e97c52250b5a90d014c.png" title=" User clicks on Show more button" width="1366"/>
+                <img src="44393ca75881736af4d01a8f8ff093b00ed063af8e652e97c52250b5a90d014c.png" title=" User show the all options (completed)" width="1366"/>
+                <img src="53a53bccb7acd527eae496802a4d493b6628c04c86b3647601e71b0d9ab00f38.png" title=" User wait process" width="1366"/>
+                <img src="53a53bccb7acd527eae496802a4d493b6628c04c86b3647601e71b0d9ab00f38.png" title=" User select lowest price (completed)" width="1366"/>
+                <img src="8c85c7f4d4ca6d32eba99743453d01157b7af5efa9ffa7b25510471a2f674903.png" title=" User continue as guest" width="1366"/>
+                <img src="8c85c7f4d4ca6d32eba99743453d01157b7af5efa9ffa7b25510471a2f674903.png" title=" User clicks on Click on continue guest" width="1366"/>
+                <img src="8c85c7f4d4ca6d32eba99743453d01157b7af5efa9ffa7b25510471a2f674903.png" title=" User continue as guest (completed)" width="1366"/>
+                <img src="8c85c7f4d4ca6d32eba99743453d01157b7af5efa9ffa7b25510471a2f674903.png" title=" And he selects the lowest price for both trips (completed)" width="1366"/>
+                <img src="e29f8410ac511baf5b8f73a1bfe162e506d5ecfc074d897bfd9a9a5d8f015ce5.png" title=" And he register his personal information
+| name | secondName | lastName | frequentProgram | frequentNumber | dateComponent | gender | residencyCoutry | redressNumber | passportNumber | dateExpirationPass | nationality |
+| Jesus | Augusto | Aguilar | IB | 52497 | 04/12/1990 | M | DZ | 5649598756236 | ECG6594 | 31/12/2022 | AI |" width="1366"/>
+                <img src="e29f8410ac511baf5b8f73a1bfe162e506d5ecfc074d897bfd9a9a5d8f015ce5.png" title=" User enters 'Jesus' into Writing passenger name" width="1366"/>
+                <img src="b728e6df56a167450f7f50e7f7a5b453b013aa996d428dfc5df9f161b95ea71e.png" title=" User enters 'Augusto' into Writing passenger second name" width="1366"/>
+                <img src="f66db22d5d55c08efe4f6cca340598b9c70a7f45c4910975d12e017634a1352c.png" title=" User enters 'Aguilar' into Writing passenger last name" width="1366"/>
+                <img src="7a08a1db5653c19bfcc60d0491eac51eb8576f06484b3095adf300c824af3424.png" title=" User enters '52497' into Frequent Flyer Number" width="1366"/>
+                <img src="a14562e61a7d2177a9bddb514ee888d6bec709cfcf4307aa4fcabeddff76d187.png" title=" User enters '5649598756236' into Redress Number passenger" width="1366"/>
+                <img src="1f2e67486f5bb90c0bd2d7ec547a37f100ad2ec59ae4cd73b4e9aa50993f5df3.png" title=" User enters 'ECG6594' into passport number" width="1366"/>
+                <img src="f7c6d93d728e02132254d748db64607e75f67aeb2fff11d30eeeed0b3ab1f4f8.png" title=" And he register his personal information
+| name | secondName | lastName | frequentProgram | frequentNumber | dateComponent | gender | residencyCoutry | redressNumber | passportNumber | dateExpirationPass | nationality |
+| Jesus | Augusto | Aguilar | IB | 52497 | 04/12/1990 | M | DZ | 5649598756236 | ECG6594 | 31/12/2022 | AI | (completed)" width="1366"/>
+                <img src="f7c6d93d728e02132254d748db64607e75f67aeb2fff11d30eeeed0b3ab1f4f8.png" title=" Then he should see the all information about the trip" width="1366"/>
+                <img src="f7c6d93d728e02132254d748db64607e75f67aeb2fff11d30eeeed0b3ab1f4f8.png" title=" User should see  that is true" width="1366"/>
+                <img src="f7c6d93d728e02132254d748db64607e75f67aeb2fff11d30eeeed0b3ab1f4f8.png" title=" Then he should see the all information about the trip (completed): <span class='success-color'>SUCCESS</span>" width="1366"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 2.4.34</span>
+</div>
+</body>
+</html>
