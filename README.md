@@ -10,3 +10,4 @@ BDD Test Automation using BDD Framework for every stage.
 Gherkin It has been used Gherkin like functionalities development because this is it more easier for understand by the business and understable between humans and computers.
 
 Java11 JDK
+Run Test gradle clean test aggregate --info
